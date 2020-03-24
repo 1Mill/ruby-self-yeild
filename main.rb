@@ -12,3 +12,9 @@ puts my_function.call(4)
 puts my_function.call(5)
 
 my_other_function.call(100)
+
+add = -> (x:, y:) { x + y }
+sub = -> (a, b) { a - b }
+
+puts add.call(x: 1, y: 2)
+puts sub.call(1, 2)
