@@ -18,3 +18,8 @@ sub = -> (a, b) { a - b }
 
 puts add.call(x: 1, y: 2)
 puts sub.call(1, 2)
+
+another_function = -> (x, y) { add.call(x: x, y: y) } \
+	>> -> x { sub.call(x, 100) } \
+	>> -> x { puts x }
+another_function.call(1,1)
