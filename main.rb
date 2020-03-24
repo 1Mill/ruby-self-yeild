@@ -1,7 +1,7 @@
 f = -> x { x + 2 }
 g = -> x { x * 2 }
 
-# puts [1,2,3].map(&f).map(&g)
+puts [1,2,3].map(&f).map(&g)
 
 my_function = -> x { x + 2 } >> -> x { x * 2 }
 my_other_function = f >> g >> -> x { puts x }
